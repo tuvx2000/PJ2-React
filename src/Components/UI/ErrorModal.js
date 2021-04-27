@@ -9,16 +9,16 @@ const ErrorModal = (props) => {
 
     return (
         <div>
-            <div className={classes.backdrop}></div>
+            <div onClick={props.onModal} className={classes.backdrop}></div>
             <Card className={classes.modal}>
                 <header className={classes.header}>
-                    <h2>{props.tittle}</h2>
+                    <h2>{props.Error.title}</h2>
                 </header>
                 <div className={classes.content}>
-                    <p>{props.message}</p>
+                    <p>{props.Error.message}</p>
                 </div>
                 <footer className={classes.actions}>
-                    <Button > OKAY </Button>
+                    <Button onClick={props.onModal}> OKAY </Button>
                 </footer>
             </Card>
         </div>)
